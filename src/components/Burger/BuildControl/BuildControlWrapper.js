@@ -1,4 +1,5 @@
 import React from 'react'
+
 import BuildControl from './BuildControl'
 import classes from './BuildControlWrapper.module.css'
 
@@ -12,7 +13,17 @@ const controls = [
 const BuildControlWrapper = props => {
 	return (
 		<div className={classes.BuildControlWrapper}>
+			<p>
+				Current Price: <strong>$ {props.price.toFixed(2)}</strong>
+			</p>
+			{controls.map(ctrl => (
+				<BuildControl
+					key={ctrl.label}
+					label={ctrl.label}
 					added={() => props.ingredientAdd(ctrl.type)}
+					removed={() => props.ingredientRemoved(ctrl.type)}
+					disabled={props.disabled[ctrl.type]}
+				/>
 			))}
 		</div>
 	)
