@@ -9,11 +9,10 @@ const controls = [
 	{ label: 'Cheese', type: 'cheese' }
 ]
 
-const BuildControlWrapper = () => {
+const BuildControlWrapper = props => {
 	return (
 		<div className={classes.BuildControlWrapper}>
-			{controls.map((ctrl, index) => (
-				<BuildControl key={index} label={ctrl.label} type={ctrl.type} />
+					added={() => props.ingredientAdd(ctrl.type)}
 			))}
 		</div>
 	)
