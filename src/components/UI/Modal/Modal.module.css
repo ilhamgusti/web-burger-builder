@@ -1,0 +1,31 @@
+.Modal {
+	position: fixed;
+	z-index: 500;
+	background: radial-gradient(#d87e29, #cc6511);
+	width: 70%;
+	/* border: 1px solid #ccc; */
+	/* box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5); */
+	border: none;
+	padding: 16px;
+	left: 15%;
+	top: 30%;
+	box-sizing: border-box;
+	border-radius: 20px;
+	transition: all 0.3s ease-out;
+}
+.Modal h3 {
+	text-align: center;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.842);
+	text-shadow: 5px;
+}
+.Modal li {
+	text-align: left;
+}
+
+@media (min-width: 600px) {
+	.Modal {
+		width: 500px;
+		left: calc(50% - 250px);
+	}
+}
