@@ -16,10 +16,10 @@ const OrderSummary = props => {
 				<strong>Total Price:</strong> $ {props.price.toFixed(2)}
 			</p>
 			<Button clicked={props.purchaseCancled} btnType="Danger">
-				cancel
+				CANCEL
 			</Button>
 			<Button clicked={props.purchaseContinued} btnType="Success">
-				continue
+				CONTINUE
 			</Button>
 		</div>
 	)
